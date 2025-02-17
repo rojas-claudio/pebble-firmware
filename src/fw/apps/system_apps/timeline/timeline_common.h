@@ -17,11 +17,12 @@
 #pragma once
 
 #include "services/normal/timeline/timeline.h"
+#include "services/common/system_theme.h"
 
 #define TIMELINE_NUM_VISIBLE_ITEMS (2)
 
 #define TIMELINE_PAST_COLOR PBL_IF_COLOR_ELSE(GColorChromeYellow, GColorLightGray)
-#define TIMELINE_FUTURE_COLOR GColorVividCerulean
+#define TIMELINE_FUTURE_COLOR PBL_IF_COLOR_ELSE(timeline_future_theme_get(), GColorLightGray)
 #define TIMELINE_DOT_COLOR GColorBlack
 
 typedef TimelineIterDirection TimelineDirection;

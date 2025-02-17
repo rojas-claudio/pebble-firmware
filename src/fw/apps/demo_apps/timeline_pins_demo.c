@@ -309,6 +309,7 @@ void timeline_pins_demo_add_pins(TimelinePinsDemoSet pin_set) {
       prv_add_weather_pin(2 * 24 * 60 * 60);
       prv_add_weather_pin(3 * 24 * 60 * 60);
       // Fallthrough
+      return;
     }
     case TimelinePinsDemo_OneDayAway:
       prv_add_weather_pin(-2 * 24 * 60 * 60);

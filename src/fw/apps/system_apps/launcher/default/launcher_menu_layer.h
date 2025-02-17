@@ -20,6 +20,8 @@
 
 #include "process_management/app_menu_data_source.h"
 
+#include "services/common/system_theme.h"
+
 #if PLATFORM_ROBERT
 #define LAUNCHER_MENU_LAYER_TITLE_FONT (FONT_KEY_GOTHIC_24_BOLD)
 #define LAUNCHER_MENU_LAYER_SUBTITLE_FONT (FONT_KEY_GOTHIC_18)
@@ -28,7 +30,7 @@
 #define LAUNCHER_MENU_LAYER_SUBTITLE_FONT (FONT_KEY_GOTHIC_14)
 #endif
 
-#define LAUNCHER_MENU_LAYER_SELECTION_BACKGROUND_COLOR (PBL_IF_COLOR_ELSE(GColorVividCerulean, \
+#define LAUNCHER_MENU_LAYER_SELECTION_BACKGROUND_COLOR (PBL_IF_COLOR_ELSE(menu_theme_get(), \
                                                                           GColorBlack))
 
 typedef struct LauncherMenuLayer {

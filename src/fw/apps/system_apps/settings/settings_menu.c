@@ -25,6 +25,7 @@
 #include "settings_system.h"
 #include "settings_time.h"
 #include "settings_timeline.h"
+#include "settings_theme.h"
 
 #if CAPABILITY_HAS_VIBE_SCORES
 #include "settings_vibe_patterns.h"
@@ -37,6 +38,9 @@
 static const SettingsModuleGetMetadata s_submodule_registry[] = {
   [SettingsMenuItemBluetooth]     = settings_bluetooth_get_info,
   [SettingsMenuItemNotifications] = settings_notifications_get_info,
+#if PBL_COLOR
+  [SettingsMenuItemTheme]         = settings_theme_get_info,
+#endif
 #if CAPABILITY_HAS_VIBE_SCORES
   [SettingsMenuItemVibrations]    = settings_vibe_patterns_get_info,
 #endif

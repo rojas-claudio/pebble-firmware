@@ -27,6 +27,8 @@
 #include "process_state/app_state/app_state.h"
 #include "util/attributes.h"
 
+#include "services/common/system_theme.h"
+
 typedef struct LauncherAppWindowData {
   Window window;
   LauncherMenuLayer launcher_menu_layer;

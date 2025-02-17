@@ -1161,7 +1161,7 @@ def qemu_image_spi(ctx):
     spi_flash_path = _create_spi_flash_image(ctx, 'qemu_spi_flash.bin')
     with open(spi_flash_path, 'wb') as qemu_spi_img_file:
         # Pad the first section before system resources with FF's'
-        qemu_spi_img_file.write("\xff" * resources_begin)
+        qemu_spi_img_file.write(b"\xff" * resources_begin)
 
         # Write system resources:
         pbpack = ctx.get_pbpack_node()
@@ -1170,7 +1170,7 @@ def qemu_image_spi(ctx):
 
         # Pad with 0xFF up to image size
         tail_padding_size = image_size - resources_begin - len(res_img)
-        qemu_spi_img_file.write("\xff" * tail_padding_size)
+        qemu_spi_img_file.write(b"\xff" * tail_padding_size)
 
     with open(os.devnull, 'w') as null:
         qemu_spi_cooker_node = ctx.path.get_bld().make_node('qemu_spi_cooker')

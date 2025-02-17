@@ -28,6 +28,9 @@
 typedef enum {
   SettingsMenuItemBluetooth = 0,
   SettingsMenuItemNotifications,
+#if PBL_COLOR
+  SettingsMenuItemTheme,
+#endif
 #if CAPABILITY_HAS_VIBE_SCORES
   SettingsMenuItemVibrations,
 #endif

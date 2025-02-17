@@ -724,7 +724,7 @@ static void prv_window_load(Window *window) {
                                   &GRect(horizontal_margin, window->layer.bounds.size.h / 2 - 15,
                                          window->layer.bounds.size.w - horizontal_margin,
                                          window->layer.bounds.size.h / 2),
-                                  i18n_get("No notifications", data), font, GColorBlack,
+                                  i18n_get("All quiet.", data), font, GColorBlack,
                                   GColorWhite, GTextAlignmentCenter,
                                   GTextOverflowModeTrailingEllipsis);
   layer_add_child(&window->layer, text_layer_get_layer(text_layer));
